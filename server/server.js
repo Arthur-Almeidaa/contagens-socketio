@@ -2,7 +2,8 @@ const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
 const app = express();
-const path = require('path')
+const path = require('path');
+const { get } = require('https');
 
 const port = process.env.PORT || 5000;
 const staticPath = path.resolve(__dirname, 'dist')
