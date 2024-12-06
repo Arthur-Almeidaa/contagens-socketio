@@ -12,10 +12,9 @@ app.use(express.static(staticPath))
 
 const server = http.createServer(app);
 
-// Configura o servidor Socket.IO para permitir conexões de "localhost:3000" (onde o React está rodando)
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://contagens-socketio.onrender.com/",
         methods: ["GET", "POST"],
     },
 });

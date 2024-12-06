@@ -3,7 +3,7 @@ import './App.css';
 import io from 'socket.io-client';
 
 // Conectar ao servidor Socket.IO
-const socket = io('http://localhost:5000'); // Substitua pelo URL do seu servidor
+const socket = io('https://contagens-socketio.onrender.com/'); // Substitua pelo URL do seu servidor
 
 function App() {
   const [counters, setCounters] = useState({
