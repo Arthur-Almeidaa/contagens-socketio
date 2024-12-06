@@ -2,8 +2,10 @@ const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
 const app = express();
+const path = require('path')
 
 const port = process.env.PORT || 5000;
+const staticPath = path.resolve(__dirname, '.', 'dist')
 
 const server = http.createServer(app);
 
@@ -29,6 +31,14 @@ io.on("connection", (socket) => {
         console.log('Cliente desconectado');
     });
 });
+
+if(process.env.NODE_ENV === "production"){
+    app.get("*", (req, res) => {
+        app.use(express.static(staticPath))
+        const indexFile = path.join(__dirname, "dist", "index.html")
+        return res.sendFile(indexFile)
+    })
+}
 
 // Inicia o servidor na porta especificada
 server.listen(port, () => {
