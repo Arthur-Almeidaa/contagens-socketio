@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "scripts": {
+    "client": "npm run dev --prefix client",
+    "server": "nodemon --env-file=.env server/server.js",
+    "dev": "concurrently \"npm run client\" \"npm run server\""
+  }
+}

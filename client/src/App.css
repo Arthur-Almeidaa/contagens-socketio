@@ -1,0 +1,44 @@
+
+/* Coloca todo o conteúdo da aplicação dentro de uma div que será posicionada */
+.App {
+  position: absolute;  /* O conteúdo será posicionado em relação à tela */
+  top: 10px;           /* Distância de 10px da parte superior da tela */
+  left: 10px;          /* Distância de 10px da parte esquerda da tela */
+  padding-left: 10px;  /* Adiciona indentação para dentro da div */
+  padding-top: 10px;   /* Adiciona indentação para dentro da div */
+  font-family: Arial, sans-serif;
+}
+
+/* Para títulos principais, como Térreo, Simulador de Carro, Imersivas */
+h1, h2 {
+  font-size: 18px;
+  color: #333; /* Cor para os títulos */
+  margin-bottom: 3px;
+  margin-left: 1px;
+}
+
+/* Para as subseções como Simulador de Carro e Imersivas */
+h3 {
+  font-size: 14px;
+  margin-left: 30px;  /* Indentação adicional para subseções */
+  margin-bottom: 5px;
+  margin-left: 1px;
+}
+
+/* Para os botões, podemos adicionar margem para dar espaço entre os botões */
+button {
+  margin-right: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Para os contadores, coloque-os ao lado do nome da atração */
+div > h3 {
+  display: inline-block;
+  margin-right: 5px;
+}
+
